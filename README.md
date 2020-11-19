@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Opdrachtbeschrijving
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Inleiding
+Je gaat een React formulier maken met controlled components. Hiervoor maak je gebruik van de React useState hook.
 
-## Available Scripts
+![screenshot](src/assets/screenshot.png)
 
-In the project directory, you can run:
+In jouw formulier komen de volgende inputs te staan:
+* _Naam_ - tekstveld
+* _Leeftijd_ - getalveld
+* _Hoe heb je dit recept gevonden?_ - selectbox met de opties "Google", "Vriend", "Advertentie", "Anders".
+* _Opmerkingen_ - tekstareaveld
+* _Versturen-knop_ (van type `submit`)
 
-### `npm start`
+Dit project is opgezet met behulp van [Create React App](https://github.com/facebook/create-react-app).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Acceptatie criteria
+* Alle inputs zijn controlled components
+* Wanneer de gebruiker op de versturen-knop klikt, worden alle waarden van de inputvelden in de console gelogt. 
+In plaats van een `onClick` eventlistener op de button te plaatsen, mag je de `onSubmit` event-listener op het `<form>`-element plaatsen! 
+Deze wordt automatisch getriggerd wanneer er geklikt wordt op een button met `type=submit` in het formulier. 
+* Omdat de button een `submit` button is, zal de pagina automatisch herladen wanneer je erop klikt. Zorg dat je dit voorkomt. 
+_Tip_: lees [dit](https://www.robinwieruch.de/react-preventdefault) artikel over `preventDefault()` in React.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**Bonus:**: Snel klaar met deze opdracht? Het is mogelijk (en in de parktijk ook gebruikelijk) om slechts één functie en één state variabele te 
+gebruiken waarmee álle `onChange` listeners worden afgevangen. Als je hier mee wil experimenteren kun je [dit](https://www.pluralsight.com/guides/handling-multiple-inputs-with-single-onchange-handler-react) 
+artikel gebruiken als leidraad. Lees vooral het kopje "Multiple Inputs" en het stuk over "Checkbox Inputs". De antwoorden voor deze aanpak staan op de branch _uitwerkingen-bonus_.
 
-### `npm test`
+**Bonus 2:** Make it look nice! 😍
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## De applicatie starten
+Als je het project gecloned hebt naar jouw lokale machine, installeer je eerst de node_modules door het volgende commando in de terminal te runnen:
 
-### `npm run build`
+`npm install`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Wanneer dit klaar is, kun je de applicatie starten met behulp van:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+of gebruik de WebStorm knop (npm start). Open http://localhost:3000 om de pagina in de browser te bekijken. Begin met het maken van wijzigingen in `src/App.js`: elke keer als je een bestand opslaat, zullen de wijzigingen te zien zijn op de webpagina.
